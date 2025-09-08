@@ -1,0 +1,76 @@
+#brands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: #1e252b;
+}
+
+.brands__card {
+    width: 100%;
+    max-width: 1224px;
+    height: 253px;
+    background-color: #1e252b;
+    border: 1px solid #283036;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 55px 40px;
+}
+
+.brands__card h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 100%;
+    color: #FFFFFFE5;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.brands__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+@media (max-width:1024px) {
+    .brands__card {
+        margin: 40px 50px;
+    }
+
+    .brands__card h2 {
+        margin-top: 30px;
+        font-size: 22px;
+    }
+
+    .brands__logos {
+        gap: 30px;
+    }
+
+    .brands__logos img {
+        width: 30%;
+    }
+}
+
+@media (max-width:600px) {
+    .brands__card {
+        padding: 30px 20px;
+    }
+
+    .brands__card h2 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .brands__logos {
+        gap: 20px;
+    }
+
+    .brands__logos img {
+        width: 20%;
+    }
+}

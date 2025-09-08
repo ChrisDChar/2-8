@@ -1,0 +1,238 @@
+#newcomer {
+    padding: 80px 20px;
+    background-color: #1e252b;
+}
+
+.container__newcomer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 200px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.newcomer__content {
+    flex: 0 0 30%;
+    max-width: 400px;
+}
+
+.newcomer__content h2 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 130%;
+    color: #FFFFFFE5;
+    margin-bottom: 25px;
+}
+
+.newcomer__content p {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #FFFFFF8C;
+    margin-bottom: 40px;
+}
+
+.explore {
+    width: 198px;
+    height: 58px;
+    border-radius: 8px;
+    background-color: #FF6E30;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.newcomer__cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    flex: 1;
+    gap: 25px;
+}
+
+.newcomer__card {
+    position: relative;
+    overflow: hidden;
+    width: 288px;
+    height: 284px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1E252B;
+    border-radius: 15px;
+    padding: 28px 22px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.newcomer__card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    inset: 0;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #FFFFFF33, #FFFFFF00, #FFFFFF40, #FFFFFF00);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.newcomer__card:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.newcomer__card:hover::before {
+    opacity: 1;
+}
+
+.new__header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.new__header img {
+    width: 64px;
+    height: 64px;
+}
+
+.new__text h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    margin-bottom: 10px;
+    color: #FFFFFFC7;
+}
+
+.new__price {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFA5378C;
+}
+
+.new__price {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFA5378C;
+}
+
+.newcomer__card p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #FFFFFF8C;
+}
+
+.new__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.new__icons {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+}
+
+.new__icons img {
+    width: 25px;
+    height: 25px;
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+}
+
+.new__heart {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    transition: opacity 0.5s ease;
+}
+
+.new__heart.default {
+    display: block;
+}
+
+.new__heart.hover {
+    display: none;
+}
+
+.newcomer__card:hover .default {
+    display: none;
+}
+
+.newcomer__card:hover .hover {
+    display: block;
+}
+
+.newcomer__card .new__visit {
+    width: 106px;
+    height: 42px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF8C;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+    transition: 0.5s ease;
+}
+
+.newcomer__card:hover .new__visit {
+    width: 106px;
+    height: 42px;
+    border-radius: 8px;
+    background-color: #FF6E30;
+}
+
+@media (max-width:1024px) {
+    .container__newcomer {
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+    }
+
+
+    .newcomer__content {
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    .newcomer__cards {
+        width: 100%;
+        justify-items: center;
+    }
+
+    .new__text h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .newcomer__card p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:650px) {
+    .newcomer__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .newcomer__card {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+}
